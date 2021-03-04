@@ -1,38 +1,160 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  background: url(./fundo.png)
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+}
+
+.body {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 70vw;
+  height: 100vh;
+  left: 15%;
+}
+
+.body h1{
   text-align: center;
+  margin-top: 2rem;
+  background: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: space-between;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: none;
 }
 
-.App-link {
-  color: #61dafb;
+.link a{
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  background: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.link a img{
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+}
+
+.link p {
+  background: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  background: white;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.list a {
+  cursor: pointer;
+  background: none;
+
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-family: Poppins;
+  font-weight: 600;
+
+  padding-top: 2rem;
+
+  transition: opacity 0.2s;
+}
+
+.list a:hover {
+  opacity: 0.8;
+}
+
+.list a img {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  width: 20rem;
+  height: 20rem;
+  padding: 0;
+  border: 0;
+}
+
+#image-first img{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+}
+
+#image img{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+}
+
+#image-last img{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .container{
+    margin: 0;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .body {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+  }
+
+  .body h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+  }
+
+  .link {
+    width: 80vw;
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+    background: none;
+    width: 80vw;
+  }
+
+  .list a img {    
+    margin-left: 0;
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .link p {
+    width: 10rem;
   }
 }
